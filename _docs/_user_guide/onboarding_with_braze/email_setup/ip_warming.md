@@ -44,7 +44,7 @@ Use our [IP warming schedule](#ip-warming-schedules) to spread your send across 
 The following metrics are important to watch during warming:
 - **Bounce Rates**: If any campaign bounces at more than 3-5%, you should evaluate the cleanliness of your list by following the guidelines in our [Keep It Clean: The Importance of Email List Hygiene][43] article. Additionally, you should consider implementing a [Sunset Policy][46] to stop emailing unengaged or dormant email addresses.
 - **Spam Reports**: If any campaign is reported as spam at a rate of more than 0.08%, you should re-evaluate the content you're sending, ensure that it is targeted to an interested audience, and make sure your emails are appropriately worded to pique their interest.
-- **Sender Reputation Scores**: The following services are useful for checking how your reputation is progressing: ReturnPath's [SenderScore][44] and Cisco's IronPort [SenderBase][45]
+- **Sender Reputation Scores**: The following services are useful for checking how your reputation is progressing: Validity's [SenderScore][44] and Cisco's [Talos Intelligence][45]
 
 {% alert note %}
 Braze recommends against using [Intelligent Timing]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/) to warm your IPs. Because IP warming campaigns are some of the first campaigns you send, Braze won't have enough information on your users to calculate an optimal send time. In this case, all messages with Intelligent Timing would default to the fallback time and send at the same time anyway.
@@ -52,9 +52,9 @@ Braze recommends against using [Intelligent Timing]({{site.baseurl}}/user_guide/
 
 ## IP warming schedules
 
-We strongly recommend adhering to this IP warming schedule strictly to ensure deliverability. It's also important that you don't skip days as consistent scaling improves deliverability.
+We strongly recommend adhering to this IP warming schedule strictly to ensure deliverability. It's okay to not send every day, but it's important to increase volume incrementally and not skip any of the steps below.
 
-Day | # of Emails to be Sent
+Step | # of Emails to be Sent
 ----|--------------------------|
 1 | 50
 2 | 100
@@ -95,5 +95,5 @@ Subdomain segmentation is especially important for large-volume senders. These s
 [40]: {{site.baseurl}}/user_guide/onboarding_with_braze/spam_regulations/
 [43]: https://www.braze.com/blog/email-list-hygiene/
 [44]: https://senderscore.org/
-[45]: http://www.senderbase.org/
+[45]: https://talosintelligence.com/
 [46]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/sunset_policies/
